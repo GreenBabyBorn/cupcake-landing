@@ -13,9 +13,6 @@ window.onscroll = function () {
   stickyScroll();
 };
 
-const wrapper = document.querySelector(".welcome");
-const layers = document.querySelectorAll(`[class*="berry-"]`);
-
 let bg = document.querySelectorAll('[class*="berry-"]');
 for (let i = 0; i < bg.length; i++) {
   window.addEventListener("mousemove", function (e) {
