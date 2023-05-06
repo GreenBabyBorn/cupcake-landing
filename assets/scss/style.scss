@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-color: #2e363e;
+  --light-gray-color: #f2f6fa;
+  --primary-color: #fed84c;
+  --blue-color: #5d6afb;
+  --white-color: #ffffff;
+}
+
+a {
+  color: var(--gray-color);
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+[class*="__container"] {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+  z-index: 50;
+  //   border-bottom: 1px solid #7e868e32;
+
+  &.sticky {
+    background: #08113062;
+    backdrop-filter: blur(10px);
+    min-height: 80px;
+  }
+  &__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 70px;
+    min-height: inherit;
+    //  min-height: 100px;
+    //  justify-content: space-between;
+  }
+  &__logo {
+  }
+  &__address {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    span {
+      color: var(--white-color);
+    }
+  }
+  &__phone {
+  }
+}
+.logo {
+  &__link {
+    color: var(--white-color);
+    font-size: 1.3rem;
+  }
+}
+.phone {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    color: var(--white-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  &__sub {
+    color: var(--white-color);
+  }
+}
+
+.page {
+  //   padding-top: 100px;
+}
+
+.welcome {
+  min-height: 100vh;
+
+  margin-bottom: 10rem;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    //  height: calc(100% + 200px);
+    z-index: -1;
+    object-fit: cover;
+  }
+  &__container {
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__sub-title {
+    padding: 10px 15px;
+    background: var(--light-gray-color);
+    color: var(--gray-color);
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--white-color);
+    margin-bottom: 1.6rem;
+    max-width: 640px;
+  }
+  &__text {
+    max-width: 544px;
+    line-height: 143%;
+    color: var(--white-color);
+    font-size: 1.3rem;
+  }
+  &__action {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+  }
+  &__btn {
+  }
+  &__about {
+    color: var(--white-color);
+  }
+}
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 50px;
+  background: var(--primary-color);
+  color: var(--gray-color);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease-out 0s;
+  font-size: 1.1rem;
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 3rem var(--light-gray-color);
+    //  color: var(--white-color);
+  }
+}
+
+.berry-1 {
+  position: absolute;
+  top: 10%;
+  left: -5%;
+}
+
+.berry-2 {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  transform: rotate(90deg);
+  transform: scale(0.8);
+}
+.berry-3 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+
+  transform: scale(0.7) rotate(170deg);
+}
+
+.leaf-1 {
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+}
+
+.products {
+  background: var(--white-color);
+  &__container {
+  }
+  &__top {
+    margin-bottom: 80px;
+  }
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+  }
+  &__bottom {
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  &__card {
+  }
+}
+.card {
+  border-radius: 10px;
+  border: 1px solid #f2f6fa;
+  display: flex;
+  flex-direction: column;
+  &__img {
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 44px 50px 44px;
+  }
+  &__title {
+    margin-bottom: 12px;
+  }
+  &__description {
+    margin-bottom: 24px;
+  }
+  &__cost {
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+  }
+  &__btn {
+    align-self: flex-start;
+    padding: 20px 40px;
+  }
+}
+.btn-link {
+}
