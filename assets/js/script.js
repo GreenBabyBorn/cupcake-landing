@@ -13,11 +13,19 @@ window.onscroll = function () {
   stickyScroll();
 };
 
-let bg = document.querySelectorAll('[class*="berry-"]');
+const bg = document.querySelectorAll('[class*="berry-"]');
 for (let i = 0; i < bg.length; i++) {
-  window.addEventListener("mousemove", function (e) {
+  window.addEventListener("mousemove", (e) => {
     let x = e.clientX / window.innerWidth;
     let y = e.clientY / window.innerHeight;
-    bg[i].style.transform = "translate(-" + x * 50 + "px, -" + y * 50 + "px)";
+    // console.log(window.getComputedStyle(bg[i]));
+    bg[i].style.setProperty("--posX", -x * 100 + "px");
+    bg[i].style.setProperty("--posY", -y * 100 + "px");
+    // bg[i].style.transform =
+    //   " translate(-" + x * 100 + "px, -" + y * 100 + "px) ";
   });
 }
+
+// Если JS включен удаляем класс
+
+header.classList.remove("nojs-header");
