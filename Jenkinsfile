@@ -4,6 +4,8 @@ pipeline {
     stage('Start') {
       steps {
         echo 'Hello World'
+        sh 'ls -al'
+        sh 'cat index.html'
       }
     }
   }
